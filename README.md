@@ -1,2 +1,2 @@
 # Codingame
-My Solutions for codingame.com
+My solutions for codingame.com
