@@ -6,6 +6,6 @@ My solutions for [codingame](http://www.codingame.com) programming puzzles.
 
 * C#
     - Easy 100%
-    - Medium 6%
+    - Medium 12%
     - Hard 0%
     - Very Hard 0%
