@@ -85,6 +85,7 @@
     <Compile Include="Easy\TheDescent.cs" />
     <Compile Include="Medium\SkynetRevolutionEp1.cs" />
     <Compile Include="Medium\SkynetRevolutionEp1Test.cs" />
+    <Compile Include="Medium\ThereIsNoSpoonEp1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

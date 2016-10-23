@@ -38,31 +38,19 @@
             }
         }
 
-        public static List<int> FindShortestPathToNode(bool[,] nodesArgs, int[] gateways, int startNode)
+        public static List<int> FindShortestPathToNode(bool[,] nodesArgs, int[] gateways, int position)
         {
-            int position = startNode;
             bool undiscoveredNodes = true;
             int nodeCount = nodesArgs.GetLength(0);
 
             // Don't mutate passed nodes array
             bool[,] nodes = (bool[,])nodesArgs.Clone();
 
-            List<List<int>> solutionPaths = new List<List<int>>();
-            List<List<int>> paths = new List<List<int>>();
-
-            for (int i = 0; i < nodeCount; i++)
-            {
-                if (nodes[position, i])
-                {
-                    paths.Add(new List<int> { position, i });
-                    nodes[position, i] = false;
-                    nodes[i, position] = false;
-                }
-            }
+            var paths = new List<List<int>> { new List<int> { position } };
 
             while (undiscoveredNodes)
             {
-                List<List<int>> newPaths = new List<List<int>>();
+                var newPaths = new List<List<int>>();
 
                 foreach (var path in paths)
                 {
@@ -98,21 +86,11 @@
 
                 paths.AddRange(newPaths);
 
-                paths.ForEach(p =>
-                {
-                    if (p.Exists(gateways.Contains))
-                    {
-                        solutionPaths.Add(p);
-                    }
-                });
+                var solutionPaths = paths.Where(p => gateways.Contains(p.Last())).OrderBy(s => s.Count);
 
-                if (solutionPaths.Count > 0)
+                if (solutionPaths.Any())
                 {
-                    // Return the shortest path, by generating a list of paths trimmed to exit nodes, sorting them by lenght and taking the first.
-                    return solutionPaths.Select(p => p.Take(gateways.Select(g => p.IndexOf(g)).Where(i => i > 0).Min() + 1))
-                        .OrderBy(s => s.Count())
-                        .First()
-                        .ToList();
+                    return solutionPaths.First();
                 }
 
                 if (nodes.Cast<bool>().All(x => x == false))
