@@ -1,11 +1,7 @@
-﻿namespace Codingame.Medium
+﻿using NUnit.Framework;
+
+namespace Codingame.Medium
 {
-    using System;
-
-    using Moq;
-
-    using NUnit.Framework;
-
     [TestFixture]
     public class SkynetRevolutionEp1Test_SimpleTest
     {

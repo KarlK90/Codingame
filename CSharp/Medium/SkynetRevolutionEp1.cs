@@ -4,6 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
 
+    using Codingame.Helper;
+
     public class SkynetRevolutionEp1
     {
         public static void Main(string[] args)
@@ -128,32 +130,6 @@
             }
 
             return gateways;
-        }
-    }
-
-    public class LineReader
-    {
-        public virtual string ReadLine()
-        {
-            return Console.ReadLine();
-        }
-    }
-
-    public class LineReaderMock : LineReader
-    {
-        public LineReaderMock(string[] input)
-        {
-            this.input = input;
-        }
-
-        private int calls = 0;
-        private string[] input;
-
-        public override string ReadLine()
-        {
-            string ret = input[calls];
-            calls++;
-            return ret;
         }
     }
 }
