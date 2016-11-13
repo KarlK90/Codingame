@@ -86,6 +86,7 @@
     <Compile Include="Helper\LineReader.cs" />
     <Compile Include="Helper\LineReaderMock.cs" />
     <Compile Include="Medium\DontPanicEp1.cs" />
+    <Compile Include="Medium\MarsLanderEp2.cs" />
     <Compile Include="Medium\ShadowsOfTheKnightEp1.cs" />
     <Compile Include="Medium\ShadowsOfTheKnightEp1Test.cs" />
     <Compile Include="Medium\SkynetRevolutionEp1.cs" />
