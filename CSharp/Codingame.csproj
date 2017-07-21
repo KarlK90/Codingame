@@ -89,6 +89,7 @@
     <Compile Include="Medium\MarsLanderEp2.cs" />
     <Compile Include="Medium\ShadowsOfTheKnightEp1.cs" />
     <Compile Include="Medium\ShadowsOfTheKnightEp1Test.cs" />
+    <Compile Include="Medium\BenderEP1.cs" />
     <Compile Include="Medium\SkynetRevolutionEp1.cs" />
     <Compile Include="Medium\SkynetRevolutionEp1Test.cs" />
     <Compile Include="Medium\ThereIsNoSpoonEp1.cs" />
